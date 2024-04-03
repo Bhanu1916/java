@@ -1,0 +1,22 @@
+class Rectangle {
+    private int length;
+    private int width;
+    
+    // Constructor
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+    public int calculateArea() {
+        return length * width;
+    }
+}
+
+public class ConstructorExample {
+    public static void main(String[] args) {
+        Rectangle myRectangle = new Rectangle(5, 10);
+        int area = myRectangle.calculateArea();
+        System.out.println("Area of the rectangle: " + area); // Output: Area of the rectangle: 50
+    }
+}
