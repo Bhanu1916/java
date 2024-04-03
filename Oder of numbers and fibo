@@ -1,0 +1,37 @@
+class FibonacciThread extends Thread {
+    @Override
+    public void run() {
+        int n = 10, firstTerm = 0, secondTerm = 1;
+        System.out.println("Fibonacci Series:");
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(firstTerm + " ");
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+        System.out.println();
+    }
+}
+
+class ReverseThread extends Thread {
+    @Override
+    public void run() {
+        System.out.println("Reverse Order:");
+        for (int i = 10; i >= 1; i--) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create threads
+        FibonacciThread fibonacciThread = new FibonacciThread();
+        ReverseThread reverseThread = new ReverseThread();
+
+        // Start threads
+        fibonacciThread.start();
+        reverseThread.start();
+    }
+}
