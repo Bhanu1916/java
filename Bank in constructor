@@ -1,0 +1,29 @@
+class Bank1 {
+    double p, n, SInterest, IInterest, AInterest;
+    Bank1(double pr, double no) {
+        p = pr;
+        n = no;
+    }
+    void SBI(double r) {
+        SInterest = p * n * r / 100;
+    }
+    void ICICI(double r) {
+        IInterest = p * n * r / 100;
+    }
+
+    void AXIS(double r) {
+        AInterest = p * n * r / 100;
+    }
+    void display() {
+        System.out.println("SBI interest: " + SInterest);
+        System.out.println("ICICI interest: " + IInterest);
+        System.out.println("Axis interest: " + AInterest);
+    }
+    public static void main(String[] args) {
+        Bank1 b = new Bank1(100000,5);
+        b.SBI(8.4);
+        b.ICICI(7.3);
+        b.AXIS(9.7);
+        b.display();
+    }
+}`
